@@ -1,0 +1,27 @@
+CREATE DATABASE pharmacy
+
+CREATE TABLE `users` (
+  `SSN` INT (10),
+  `name` varchar(50) NOT NULL,
+  `surname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `dateOfBirth` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `drugs` (
+  `NAME` varchar(50) NOT NULL,
+  `TYPE` varchar(20) NOT NULL,
+  `BARCODE` varchar(20) NOT NULL,
+  `DOSE` varchar(10) NOT NULL,
+  `CODE` varchar(10) NOT NULL,
+  `COST_PRICE` double NOT NULL,
+  `SELLING_PRICE` double NOT NULL,
+  `COMPANY_NAME` varchar(50) NOT NULL,
+  `PRODUCTION_DATE` varchar(60) NOT NULL,
+  `EXPIRATION_DATE` varchar(60) NOT NULL,
+  `QUANTITY` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `users`(`SSN`, `name`, `surname`, `email`, `password`, `phone`, `dateOfBirth`) VALUES ('1234','admin','admin','admin@admin.al','12345678','06923232','23-02-2022');
